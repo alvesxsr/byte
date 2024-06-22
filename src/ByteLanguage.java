@@ -37,8 +37,12 @@ public class ByteLanguage {
         return allTerms;
     }
 
-    public static void removeFirstInAllTerms () {
+    public static void removeFirstAllTerms () {
         allTerms.removeFirst();
+    }
+
+    public static void setFirstElementAllTerms (TermModel termModel) {
+        allTerms.set(0, termModel);
     }
 
     // --------------
