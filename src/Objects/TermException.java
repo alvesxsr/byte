@@ -9,4 +9,8 @@ public class TermException extends Exception {
         + ". Solução: " +
         solution);
     }
+
+    public TermException (String message) {
+        super(message);
+    }
 }

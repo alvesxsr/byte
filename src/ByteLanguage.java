@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
+import src.Objects.Algorithm;
+import src.Objects.TermException;
 import src.Objects.TermModel;
 
 public class ByteLanguage {
@@ -35,6 +37,10 @@ public class ByteLanguage {
         return allTerms;
     }
 
+    public static void removeFirstInAllTerms () {
+        allTerms.removeFirst();
+    }
+
     // --------------
     public static void main(String[] args) {
 
@@ -44,7 +50,12 @@ public class ByteLanguage {
         setNameFile("Main.byte");
 
         try {
-            ByteLanguage.allTerms = TermModel.findTerms();  
+            ByteLanguage.allTerms = TermModel.findTerms();
+            Algorithm.findAlgorithm();
+        }
+
+        catch (TermException termException) {
+            System.out.println(termException.getMessage());
         }
         
         catch (FileNotFoundException fileNotFoundException) {
