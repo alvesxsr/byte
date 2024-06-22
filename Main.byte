@@ -1,0 +1,21 @@
+algoritmo Main;
+var aa;
+var ba, bb;
+início
+    escreva("Digite o valor de aa: ");
+    leia(aa);
+
+    se (aa == 10) {
+        escreva("aa é igual a 10");
+    }
+
+    senão {
+        escreva("aa é diferente de 10");
+    }
+
+    ab <- aa + 5;
+
+    se (ab < 10) {
+        escreva("ab é menor que 10. ab: " + ab);
+    }
+fim
